@@ -7,7 +7,7 @@
 python -m grpc_tools.protoc -Iproto  --python_out=proto --grpc_python_out=proto  proto/git.proto
 ```
 
-실행 경로 위치는 한단계 상위폴더 여야 함 …. (clone한 디렉토리의 경로 ... \git-proto>   )
+실행 경로 위치는 git.proto 파일보다 한단계 상위폴더 여야 함 …. (clone한 디렉토리의 경로 ... \git-proto>   )
 프로토 파일을 python 파일로 변환법  … 클라이언트 용...
 -Iproto 처음 인자는 .proto 파일이 들어있는 폴더명….
 --python_out=proto --grpc_python_out=proto 두번째 세번째 인자는 파일 생성 위치 …
