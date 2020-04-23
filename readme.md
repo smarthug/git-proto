@@ -17,9 +17,16 @@ proto/git.proto 네번째 인자는 변환할 프로토파일 위치 … (복수
 ## convert proto to go file
 
 ```
-protoc --go_out=plugins=grpc:.  ./git.proto
+protoc --go_out=plugins=grpc:proto  proto/git.proto
 ```
 파일이 있는 위치에서 가능 …
 
 첫번째 인자 파일 나올 위치인데  grpc용으로 컴파일하는 거라 grpc 플러그인 명시 해줘야 함 ….
 두번째 인자는 컴파일할 파일위치 
+
+
+## ETC
+```
+C:\Users\hosuk\go\src\proto>python -m grpc_tools.protoc --proto_path=../proto  --python_out=. --grpc_python_out=.  git.proto
+protoc --go_out=plugins=grpc:.  ./git.proto
+```
