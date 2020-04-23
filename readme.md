@@ -2,7 +2,7 @@
 
 ## convert proto to python file
 
-C:\Users\hosuk\go\src>
+
 ```
 python -m grpc_tools.protoc -Iproto  --python_out=proto --grpc_python_out=proto  proto/git.proto
 ```
