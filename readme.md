@@ -1,8 +1,8 @@
 # git proto
 
 ## prerequisite
-https://grpc.io/docs/quickstart/python/
-https://grpc.io/docs/quickstart/go/
+- https://grpc.io/docs/quickstart/python/
+- https://grpc.io/docs/quickstart/go/
 
 
 
