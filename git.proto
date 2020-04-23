@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package git;
+
+
+
+message RequestPath {
+    string path = 1;
+}
+
+message RequestHash {
+    string hash = 1;
+}
+
+message RequestFile {
+    string path = 1;
+    bytes filedata = 2;
+    string filename = 3;
+    uint32 filemode  = 4;
+}
+
+message ResponseResult {
+    string result = 1;
+}
+
+message ResponseTree {
+    repeated Tree trees = 1;
+}
+
+message Tree {
+    string Name = 1;
+    string Mode = 2;
+    string Hash = 3;
+}
+
+service Git {
+    
+    rpc CreateAndInitDirectory(RequestPath) returns (ResponseResult) {}
+    rpc AddOrUpdateFile(RequestFile) returns (ResponseResult) {}
+
+    rpc GetRepoTree(RequestPath) returns (ResponseTree) {}
+    rpc RenderTree(RequestHash) returns (ResponseTree) {}
+}
